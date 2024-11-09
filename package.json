@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.11.11",
     "react-bootstrap": "^2.10.5",

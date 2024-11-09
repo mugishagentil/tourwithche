@@ -83,10 +83,10 @@ function Header() {
         {/* Main-Content-Part */}
         <div id="Content">
           <div id="inner">
-            <h5 style={{ fontSize: '40px', fontWeight: '700' }}>Tour Withche</h5>
+            <h5 className='animate__backInDown' style={{ fontSize: '40px', fontWeight: '700' }}>Tour Withche</h5>
             <p>Welcome to TourwithChe, your gateway to unforgettable adventures in the heart of East Africa! We are your trusted guides to the breathtaking landscapes and vibrant cultures of Rwanda and Tanzania.</p>
             <div id="buttons">
-             <a href="http://localhost:5173/about"> <button className="btn btn-warning">Read More</button></a>
+             <a href="http://localhost:5173/about"> <button className="btn btn-warning animate__backInUp">Read More</button></a>
             </div>
           </div>
         </div>

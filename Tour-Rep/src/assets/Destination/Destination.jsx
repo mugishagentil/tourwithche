@@ -35,8 +35,8 @@ function Destination() {
   return (
     <div className="destination-wrapper">
       <div className="header-section">
-        <h2>Our Iconic Destinations</h2>
-        <p>
+        <h2 className='animate__backInDown'>Our Iconic Destinations</h2>
+        <p className='animate__backInDown'>
           We operate in 8 African countries, with 60+ camps promising exclusive, private wild game
           viewing, unrivalled style, comfort, and a range of activities for a full immersion in nature and local culture.
         </p>
