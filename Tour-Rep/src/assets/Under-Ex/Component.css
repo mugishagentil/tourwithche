@@ -1,0 +1,113 @@
+/* Full screen section */
+.full-screen-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Image/kenya.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  
+  /* Dark overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Transparent by default */
+    transition: background-color 1s ease;
+    z-index: 2;
+  }
+  
+  /* Dark overlay when content is visible */
+  .overlay-dark {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with opacity */
+  }
+  
+  /* Content styling */
+  .content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 3;
+  }
+  
+  .content-container.fade-in {
+    opacity: 1;
+    transform: translate(-50%, -40%);
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #d3d3d3;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .explore-button1 {
+    font-size: 1rem;
+    color: #ffffff; /* Accent color */
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #ffc107;
+  }
+  .explore-button1:hover{
+    color: #000000; /* Accent color */
+    background-color: #ffffff;
+  }
+  .explore-button1 i {
+    margin-left: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .title {
+      font-size: 2.5rem;
+    }
+    
+    .description {
+      font-size: 1.1rem;
+    }
+    
+  }
+  
+  @media (min-width: 1200px) {
+    .title {
+      font-size: 3rem;
+    }
+  
+    .description {
+      font-size: 1.2rem;
+    }
+  }
+  

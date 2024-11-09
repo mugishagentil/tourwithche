@@ -40,7 +40,7 @@ function Destination() {
           We operate in 8 African countries, with 60+ camps promising exclusive, private wild game
           viewing, unrivalled style, comfort, and a range of activities for a full immersion in nature and local culture.
         </p>
-        <button className="explore-button">Explore Destinations Map</button>
+        <button className="explore-button1">Explore Destinations Map</button>
       </div>
       <div className="slideshow">
         <div className="nav-bar">

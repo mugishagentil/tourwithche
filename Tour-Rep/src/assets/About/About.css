@@ -1,57 +1,37 @@
-#Gorilla{
-    width: 35rem;
+/* Image Styling */
+#Gorilla {
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
-#Col-two{
-    padding-top: 100px;
+
+/* Column Two Padding */
+#Col-two {
+    padding-top: 20px;
 }
-/* Mobile phones (portrait) */
-@media (max-width: 480px) {
-    #Gorilla{
-        width: 22rem;
-    }
-    #Col-two{
-        width: 80%;
-        padding-top: 30px;
-    }
- }
- /* Mobile devices (landscape), small tablets */
- @media (max-width: 768px) {
-    #Gorilla{
-        width: 22rem;
-    }
-    #Col-two{
-        width: 80%;
-        padding-top: 30px;
-    }
- }
-/* Tablets (portrait) */
- @media (max-width: 992px) {
-    #Gorilla{
-        width: 24rem;
-        margin-top: 90px;
-    }
-    #Col-two{
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    #Gorilla {
         width: 100%;
+    }
+    #Col-two {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    #Gorilla {
+        width: 90%;
+    }
+    #Col-two {
         padding-top: 30px;
     }
- }
- /* Small laptops / large tablets */
- @media (max-width: 1200px) {
-    #Col-two{
-        width: 100%;
-        padding-top: 30px;
+}
+
+@media (min-width: 1200px) {
+    #Gorilla {
+        width: 35rem;
     }
- }
- /* Large desktops */
- @media (max-width: 1600px) {}
- /* Ultra-wide screens */
- @media (max-width: 1920px) {}
-
-
-
-
-
- 
- 
+}
