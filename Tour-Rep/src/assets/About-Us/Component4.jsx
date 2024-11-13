@@ -26,8 +26,8 @@ const Component4 = () => {
     <div id="why-choose-us">
       <div id="overlay"></div>
       <div id="content-container">
-        <h2 id="section-title">Why Choose Us</h2>
-        <div id="sections-container">
+        <h2 id="section-title block">Why Choose Us</h2>
+        <div id="sections-container" className='block'>
           {sections.map((section, index) => (
             <div id="section" key={index}>
               <div id="icon-container">{section.icon}</div>

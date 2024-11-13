@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import MainImg from '../Image/Background.jpg';
+import Logo from '../Image/logo.png'
 import './Header.css';
+import 'animate.css';
+
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -22,31 +25,12 @@ function Header() {
 
   return (
     <>
-      {/* Header-Displayed-Information-Part */}
-      <div style={{ backgroundColor: '#252628', color: '#ffff', height: '5vh', paddingTop: '2px' }}>
-        <div className="container text-center">
-          <div className="row" id="Row">
-            <div className="col">
-              <p> <i className="fa-solid fa-envelope"></i> info@tourwithche.com </p>
-            </div>
-            <div className="col">
-              <p> <i className="fa-solid fa-phone"></i> +250 782 444 676</p>
-            </div>
-            <div className="col">
-              <a href="" style={{ marginRight: '7px', color: '#ffff' }}><i className="fa-brands fa-facebook"></i></a>
-              <a href="" style={{ marginRight: '7px', color: '#ffff' }}><i className="fa-brands fa-instagram"></i></a>
-              <a href="" style={{ marginRight: '7px', color: '#ffff' }}><i className="fa-brands fa-twitter"></i></a>
-              <a href="" style={{ marginRight: '7px', color: '#ffff' }}><i className="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Header-Main-Menu-Part */}
       <div id="Main">
-        <nav className={`navbar navbar-expand-lg bg-body-tertiary ${isSticky ? 'sticky' : ''}`}>
+        <div className='background-overlay'>
+        <nav className={`navbar navbar-expand-lg bg-bod ${isSticky ? 'sticky' : ''}`}>
           <div className="container-fluid">
-            <a className="navbar-brand me-auto" href="http://localhost:5173/">LOGO</a>
+            <a className="navbar-brand me-auto" href="http://localhost:5173/"><img src={Logo} alt="" className='Logo'/></a>
             <button
               className="navbar-toggler"
               type="button"
@@ -67,10 +51,10 @@ function Header() {
                   <a className="nav-link" href="http://localhost:5173/about">About</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Destination</a>
+                  <a className="nav-link" href="http://localhost:5173/destination">Destination</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Contact</a>
+                  <a className="nav-link" href="http://localhost:5173/Contact">Contact</a>
                 </li>
               </ul>
               <span className="navbar-text">
@@ -82,13 +66,20 @@ function Header() {
 
         {/* Main-Content-Part */}
         <div id="Content">
-          <div id="inner">
-            <h5 className='animate__backInDown' style={{ fontSize: '40px', fontWeight: '700' }}>Tour Withche</h5>
-            <p>Welcome to TourwithChe, your gateway to unforgettable adventures in the heart of East Africa! We are your trusted guides to the breathtaking landscapes and vibrant cultures of Rwanda and Tanzania.</p>
-            <div id="buttons">
-             <a href="http://localhost:5173/about"> <button className="btn btn-warning animate__backInUp">Read More</button></a>
-            </div>
-          </div>
+          {/* New-Content */}
+          <section className="background-section">
+      <div className="overlay"></div>
+      <div className="content">
+        <h1 className='welcome animate__animated animate__backInDown'>WELCOME TO</h1>
+        <h1 className="title1 animate__animated animate__backInDown">TOURWITHCH</h1>
+        <hr />
+        <p className="subtitle">
+        Your gateway to unforgettable adventures in the heart of East Africa! We are your trusted guides to the breathtaking landscapes and vibrant cultures of Rwanda and Tanzania.
+        </p>
+        <p className="coordinates animate__animated animate__backInUp">Explore The World With Us</p>
+      </div>
+    </section>
+        </div>
         </div>
       </div>
     </>

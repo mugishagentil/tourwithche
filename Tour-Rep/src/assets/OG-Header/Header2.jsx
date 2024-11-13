@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import MainImg from '../Image/Background.jpg'; // Make sure to import your image if needed for display
+import MainImg from '../Image/Background.jpg'; 
+import Logo from '../Image/logo.png'
 import './Header2.css'; // CSS file
 
 function Header() {
@@ -22,29 +23,9 @@ function Header() {
 
   return (
     <>
-      {/* Header Displayed Information Part */}
-      <div className="top-bar">
-        <div className="container text-center">
-          <div className="row" id="Row">
-            <div className="col">
-              <p><i className="fa-solid fa-envelope"></i> info@tourwithche.com</p>
-            </div>
-            <div className="col">
-              <p><i className="fa-solid fa-phone"></i> +250 782 444 676</p>
-            </div>
-            <div className="col social-icons">
-              <a href="#" className="social-link"><i className="fa-brands fa-facebook"></i></a>
-              <a href="#" className="social-link"><i className="fa-brands fa-instagram"></i></a>
-              <a href="#" className="social-link"><i className="fa-brands fa-twitter"></i></a>
-              <a href="#" className="social-link"><i className="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <nav className={`navbar navbar-expand-lg ${isSticky ? 'sticky' : 'bg-body-tertiary'}`}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="http://localhost:5173/">LOGO</a>
+        <a className="navbar-brand me-auto" href="http://localhost:5173/"><img src={Logo} alt="" className='Logo-Two'/></a>
           <button
             className="navbar-toggler"
             type="button"

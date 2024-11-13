@@ -8,7 +8,18 @@
     background-attachment: fixed;
     background-size: cover;
 }
-
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+.Logo{
+    width: 80px;
+}
 /* Navbar Styling */
 .navbar {
     transition: background-color 0.3s ease; /* Smooth transition for background color */
@@ -32,7 +43,15 @@
     background-color: black; /* Black background on scroll */
     color: white;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699);
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar-toggler{
+    color: white;
+}
+span.navbar-toggler-icon{
+    color: white;
 }
 
 .sticky .nav-link,
@@ -51,6 +70,19 @@
     align-items: center;
     color: white;
 }
+/* #wilderness-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+  
+  #wilderness-title {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 8px;
+    margin-bottom: 1rem;
+  } */
 
 /* Inner Content Container */
 #inner {
@@ -68,6 +100,9 @@
     #inner {
         width: 90%;
         margin-bottom: 100px;
+    }
+    .Logo{
+        width: 60px;
     }
 }
 
@@ -97,3 +132,135 @@
         width: 40%;
     }
 }
+
+/* News-Content */
+/* WildernessComponent.css */
+/* Main styling */
+.background-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('path/to/your/image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Text Styling */
+  .welcome {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    margin: 0;
+  }
+  
+  .title1 {
+    font-size: 4.5rem;
+    font-weight: 330;
+    letter-spacing: 0.3rem;
+    margin: 0;
+  }
+  
+  .subtitle {
+    margin: 10px 0 20px;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .coordinates {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    opacity: 0.8;
+  }
+  
+  /* Responsive styling */
+  
+  /* Medium screens (tablets) */
+  @media (max-width: 1024px) {
+    .title1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+  
+    .subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .coordinates {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Small screens (large phones) */
+  @media (max-width: 768px) {
+    .welcome {
+      font-size: 1rem;
+    }
+  
+    .title1 {
+      font-size: 2rem;
+      letter-spacing: 0.15rem;
+    }
+  
+    .subtitle {
+      font-size: 0.85rem;
+    }
+  
+    .coordinates {
+      font-size: 0.75rem;
+    }
+  
+    .content {
+      padding: 10px;
+    }
+  }
+  
+  /* Extra small screens (small phones) */
+  @media (max-width: 480px) {
+    .title1 {
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+    }
+  
+    .welcome {
+      font-size: 0.9rem;
+    }
+  
+    .subtitle {
+      font-size: 0.8rem;
+    }
+  
+    .coordinates {
+      font-size: 0.7rem;
+    }
+  
+    .content {
+      padding: 5px;
+      max-width: 100%;
+    }
+  }
+  

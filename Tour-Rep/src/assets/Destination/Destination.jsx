@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Destination.css'; // Create this CSS file for styling
+import './Destination.css';
 import botswana from '../Image/botswana.jpg';
 import zambia from '../Image/zambia.jpg';
 import rwanda from '../Image/rwanda.jpg';
@@ -20,27 +20,37 @@ const destinations = [
 
 function Destination() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animateOut, setAnimateOut] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % destinations.length);
-    }, 5000); // Increase to 5 seconds
+      setAnimateOut(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % destinations.length);
+        setAnimateOut(false);
+      }, 500);
+    }, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
   const handleDestinationClick = (index) => {
-    setCurrentIndex(index);
+    setAnimateOut(true);
+    setTimeout(() => {
+      setCurrentIndex(index);
+      setAnimateOut(false);
+    }, 500);
   };
 
   return (
     <div className="destination-wrapper">
       <div className="header-section">
-        <h2 className='animate__backInDown'>Our Iconic Destinations</h2>
-        <p className='animate__backInDown'>
+        <h2 className="animate__backInDown block">Our Iconic Destinations</h2>
+        <p className="animate__backInDown block">
           We operate in 8 African countries, with 60+ camps promising exclusive, private wild game
           viewing, unrivalled style, comfort, and a range of activities for a full immersion in nature and local culture.
         </p>
-        <button className="explore-button1">Explore Destinations Map</button>
+        <a href="http://localhost:5173/destination"><button className="explore-button1 block">Explore Destinations Map</button></a>
       </div>
       <div className="slideshow">
         <div className="nav-bar">
@@ -55,15 +65,17 @@ function Destination() {
           ))}
         </div>
         <div className="image-container">
-          <div className="image-wrapper">
-            <img
-              src={destinations[currentIndex].image}
-              alt={destinations[currentIndex].name}
-              className="image"
-            />
-            <div className="image-description">{destinations[currentIndex].description}</div>
+          <img
+            key={currentIndex}
+            src={destinations[currentIndex].image}
+            alt={destinations[currentIndex].name}
+            className="image"
+          />
+          <div className="image-overlay">
+            <h1 className={`image-title zoom-animation ${animateOut ? 'slide-out' : 'slide-in'}`}>
+              {destinations[currentIndex].name}
+            </h1>
           </div>
-          <h1 className="image-title">{destinations[currentIndex].name}</h1>
         </div>
       </div>
     </div>

@@ -1,15 +1,16 @@
 import React from 'react'
 import './AboutUs.css';
+import 'animate.css';
 function Componenr2() {
   return (
-    <div>
+    <div style={{backgroundColor: '#070707f6'}}>
       <main className="about-us">
-      <section className="services">
-        <h2>Our Services</h2>
+      <section className="services block">
+        <h2 className='animate__animated animate__backInDown' style={{color: '#fff'}}>Our Services</h2>
         <div className="service-list">
           <div className="service-item">
             <h3>Why Choose Us</h3>
-            <p>
+            <p className='animate__animated animate__fadeInUp'>
               Unforgettable Adventures Await: Embark on a journey with TourwithChe, and you're choosing an 
               adventure that goes beyond the ordinary. Our tours are carefully crafted to immerse you in the 
               heart of Rwanda and Tanzania, ensuring every moment is etched in your memory. From gorilla 
@@ -18,7 +19,7 @@ function Componenr2() {
           </div>
           <div className="service-item">
             <h3>Responsible, Sustainable Travel</h3>
-            <p>
+            <p className='animate__animated animate__fadeInUp'>
               When you choose TourwithChe, you're making a conscious choice for responsible and sustainable 
               tourism. We believe in giving back to the communities we visit and protecting the environment. 
               Your travels support local well-being and the preservation of these remarkable destinations.
@@ -26,7 +27,7 @@ function Componenr2() {
           </div>
           <div className="service-item">
             <h3>Local Expertise, Global Service</h3>
-            <p>
+            <p className='animate__animated animate__fadeInUp'>
               TourwithChe combines local expertise with global service standards. Our team knows these lands 
               intimately and is committed to ensuring your comfort, safety, and satisfaction. Choose us for a 
               seamless, enriching, and transformative travel experience. Your African adventure begins with 

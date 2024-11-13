@@ -39,9 +39,9 @@ const FullScreenSection = () => {
           <p className="description">
             We’re excited to take you on a journey to experience sights and sounds found nowhere else on Earth. Unique scenery, wildlife, and cultures are waiting to be revealed, and we at Wilderness can’t wait to share them with you. Our custom-designed journeys are intended to inspire but can be tailor-made to suit your every need. It’s time to let your safari dreams run wild.
           </p>
-          <button className="explore-button1 btn btn-link">
+         <a href="</a>"> <button className="explore-button1 btn btn-link">
             <span>EXPLORE OUR JOURNEYS</span> <i className="bi bi-arrow-right-circle"></i>
-          </button>
+          </button></a>
         </div>
       </div>
     </div>

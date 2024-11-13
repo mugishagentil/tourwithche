@@ -1,106 +1,230 @@
+.adventure-grid-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #141414;
+  color: #fff;
+}
+
+.adventure-title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 50px 0 0 0;
+  color: #fff; /* Optional: Add color to make it stand out */
+}
+.Adventure-Paragraph{
+  width: 50%;
+  margin: 0 0 100px 25%;
+}
+.last-line{
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 20px;
+}
+/* Existing styles */
 .adventure-grid {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .adventure-item {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: white;
-    transition: transform 0.3s ease;
-  }
-  
-  .adventure-item:hover {
-    transform: scale(1.05);
-  }
-  
-  .adventure-overlay {
-    background: rgba(58, 58, 58, 0.5);
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-  }
-  
-  .adventure-overlay h2 {
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-  
-  .adventure-overlay p {
-    font-size: 1.2em;
-    font-style: italic;
-    margin-top: 5px;
-  }
-  
-  /* Hover Paragraph */
-  .hover-paragraph {
-    position: absolute;
-    bottom: 30%;
-    left: 10%;
-    transform: translateX(-50%);
-    width: 80%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px;
-    border-radius: 8px;
-    color: white;
-    font-size: 0.9em;
-    text-align: center;
-    opacity: 0;
-    animation: backInUp 0.5s forwards;
-  }
-  
-  @keyframes backInUp {
-    0% {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.adventure-item {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.adventure-item:hover {
+  transform: scale(1.05);
+}
+
+.adventure-overlay {
+  background: rgba(58, 58, 58, 0.466);
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.adventure-overlay h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.adventure-overlay p {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* Hover Paragraph */
+.hover-paragraph {
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  animation: backInUp 0.5s forwards;
+}
+
+@keyframes backInUp {
+  0% {
       opacity: 0;
       transform: translateY(50px);
-    }
-    100% {
+  }
+  100% {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
-  /* Hide paragraph on mouse leave */
-  .adventure-item:hover .hover-paragraph {
-    display: block;
+}
+
+/* Hide paragraph on mouse leave */
+.adventure-item:hover .hover-paragraph {
+  display: block;
+}
+
+.adventure-item:not(:hover) .hover-paragraph {
+  display: none;
+}
+/* Animation */
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
   }
-  
-  .adventure-item:not(:hover) .hover-paragraph {
-    display: none;
+  to{
+    opacity: 1;
+    scale: 1;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .adventure-grid {
+}
+.block {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .adventure-grid {
       flex-direction: column;
       height: auto;
-    }
-  
-    .adventure-item {
+  }
+
+  .adventure-item {
       height: 70vh;
       margin-bottom: 10px;
-    }
   }
-  
-  @media (max-width: 480px) {
-    .adventure-overlay h2 {
+}
+
+@media (max-width: 480px) {
+  .adventure-overlay h2 {
       font-size: 1.5em;
-    }
-  
-    .adventure-overlay p {
+  }
+
+  .adventure-overlay p {
       font-size: 1em;
-    }
-  
-    .hover-paragraph {
+  }
+
+  .hover-paragraph {
       font-size: 0.8em;
       width: 90%;
-    }
   }
-  
+
+  .adventure-title {
+      font-size: 2em;
+  }
+  .Adventure-Paragraph{
+    width: 100%;
+    margin: 0 0 50px 0%;
+  }
+}
+
+/* News-Style */
+/* Container styling */
+.newsletter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Content alignment */
+.newsletter-content {
+  max-width: 600px; /* Increased width for larger input fields */
+  width: 100%;
+  text-align: left;
+  border: none;
+  padding: 10px;
+}
+
+/* Headline and description */
+.newsletter-content h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.newsletter-content p {
+  margin: 10px 0 20px;
+  color: #d4d4d4;
+}
+
+/* Form styling */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.input-field {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%; /* Make input fields take full width */
+  box-sizing: border-box; /* Ensure padding doesn’t overflow the width */
+}
+
+.submit-button2 {
+  padding: 10px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .newsletter-container {
+    padding: 20px;
+  }
+
+  .name-fields {
+    flex-direction: column;
+  }
+
+  .newsletter-content h2 {
+    font-size: 1.5em;
+  }
+
+  .input-field {
+    font-size: 0.9em;
+  }
+}

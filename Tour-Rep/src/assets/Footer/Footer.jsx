@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
+
 const Footer = () => {
   return (
     <footer className="footer-container">
@@ -23,17 +24,17 @@ const Footer = () => {
         {/* Links Section */}
         <div className="footer-section contact">
           <h3>Quick Links</h3>
-          <p><i className="fas fa-map-marker-alt"></i> Home</p>
-          <p><i className="fas fa-envelope"></i> About</p>
-          <p><i className="fas fa-phone"></i>Contact</p>
+          <p><i className="fas fa-house-user"></i> <a href="/">Home</a></p>
+          <p><i className="fas fa-info-circle"></i><a href="http://localhost:5173/about">About</a></p>
+          <p><i className="fas fa-phone"></i><a href="http://localhost:5173/Contact">Contact</a> </p>
         </div>
 
         {/* Support Links Section */}
         <div className="footer-section contact">
           <h3>Help & Support</h3>
-          <p><i className="fas fa-map-marker-alt"></i> Faq</p>
-          <p><i className="fas fa-envelope"></i> Support</p>
-          <p><i className="fas fa-phone"></i>Terms & Service</p>
+          <p><i className="fas fa-question-circle"></i><a href="http://localhost:5173/about">FAQ</a></p>
+          <p><i className="fas fa-life-ring"></i> <a href="http://localhost:5173/Contact">Support</a></p>
+          <p><i className="fas fa-file-contract"></i> <a href="http://localhost:5173/about">Terms & Service</a></p>
         </div>
 
         {/* Contact Section */}
