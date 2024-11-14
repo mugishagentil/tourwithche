@@ -106,7 +106,7 @@ body {
 }
 
 .image-title {
-  font-size: 2em;
+  font-size: 4em;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   white-space: nowrap;
@@ -115,17 +115,42 @@ body {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Slide-out and zoom-out effect */
-.slide-out {
-  opacity: 0;
-  transform: translateX(-100%) scale(0.8);
+/* Zoom-in effect (appears larger, then shrinks slightly to settle in) */
+.zoom-in {
+  animation: zoomInLarge 0.7s ease forwards;
 }
 
-/* Slide-in effect */
-.slide-in {
-  opacity: 1;
-  transform: translateX(0) scale(1);
+/* Zoom-out effect (shrinks gradually before disappearing) */
+.zoom-out {
+  animation: zoomOutSmall 0.7s ease forwards;
 }
+
+@keyframes zoomInLarge {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOutSmall {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
 
 /* Media queries */
 @media (max-width: 768px) {

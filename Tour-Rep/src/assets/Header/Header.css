@@ -34,6 +34,17 @@
     font-weight: 700;
     color: white !important;
 }
+.myBtn{
+  background-color: #ffc107;
+  color: black;
+  padding: 10px 20px 10px 20px;
+  border: none; 
+  margin-left: 5px;
+}
+.myBtn:hover{
+  background-color: rgb(34, 21, 3);
+  color: white;
+}
 
 /* Sticky navbar (changes on scroll) */
 .sticky {
@@ -58,6 +69,14 @@ span.navbar-toggler-icon{
 .sticky .navbar-brand {
     color: white !important;
 }
+.sticky .myBtn{
+  background-color: rgb(34, 21, 3);
+  color: white;
+}
+.sticky .myBtn :hover{
+  background-color: #ffc107;
+  color: rgb(0, 0, 0);
+}
 
 /* Additional Styling (Unchanged) */
 /* Centering Content */
@@ -70,28 +89,6 @@ span.navbar-toggler-icon{
     align-items: center;
     color: white;
 }
-/* #wilderness-subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-  }
-  
-  #wilderness-title {
-    font-size: 4rem;
-    font-weight: 600;
-    letter-spacing: 8px;
-    margin-bottom: 1rem;
-  } */
-
-/* Inner Content Container */
-#inner {
-    width: 30%;
-    text-align: center;
-    color: white;
-    font-weight: 700;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 480px) {
     #Row {
@@ -263,4 +260,6 @@ span.navbar-toggler-icon{
       max-width: 100%;
     }
   }
+  
+  /* Active-Header */
   

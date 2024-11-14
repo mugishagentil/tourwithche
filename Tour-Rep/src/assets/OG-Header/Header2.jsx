@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import MainImg from '../Image/Background.jpg'; 
-import Logo from '../Image/logo.png'
+import Logo from '../Image/logo.png';
 import './Header2.css'; // CSS file
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
+
+  // Initialize activeLink based on the current URL path
+  const getPathname = () => {
+    const path = window.location.pathname;
+    if (path === '/' || path === '') return 'Home';
+    if (path === '/destination') return 'Destination';
+    if (path === '/Contact') return 'Contact';
+    return 'About'; // Default to 'About' if no match
+  };
+  
+  const [activeLink, setActiveLink] = useState(getPathname); // Determine the active link on load
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,11 +32,15 @@ function Header() {
     };
   }, []);
 
+  const handleSetActiveLink = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <>
       <nav className={`navbar navbar-expand-lg ${isSticky ? 'sticky' : 'bg-body-tertiary'}`}>
         <div className="container-fluid">
-        <a className="navbar-brand me-auto" href="http://localhost:5173/"><img src={Logo} alt="" className='Logo-Two'/></a>
+          <a className="navbar-brand me-auto" href="http://localhost:5173/"><img src={Logo} alt="" className='Logo-Two' /></a>
           <button
             className="navbar-toggler"
             type="button"
@@ -40,20 +55,44 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a 
+                  className={`nav-link ${activeLink === 'Home' ? 'active' : ''}`} 
+                  href="/"
+                  onClick={() => handleSetActiveLink('Home')}
+                >
+                  Home
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">About</a>
+                <a 
+                  className={`nav-link ${activeLink === 'About' ? 'active' : ''}`} 
+                  href="/about"
+                  onClick={() => handleSetActiveLink('About')}
+                >
+                  About
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://localhost:5173/destination">Destination</a>
+                <a 
+                  className={`nav-link ${activeLink === 'Destination' ? 'active' : ''}`} 
+                  href="/destination"
+                  onClick={() => handleSetActiveLink('Destination')}
+                >
+                  Destination
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://localhost:5173/Contact">Contact</a>
+                <a 
+                  className={`nav-link ${activeLink === 'Contact' ? 'active' : ''}`} 
+                  href="/Contact"
+                  onClick={() => handleSetActiveLink('Contact')}
+                >
+                  Contact
+                </a>
               </li>
             </ul>
             <span className="navbar-text">
-              <button className="btn btn-warning">ENQUIRY</button>
+              <button className="myBtn">ENQUIRY</button>
             </span>
           </div>
         </div>

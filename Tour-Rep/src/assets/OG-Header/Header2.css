@@ -12,6 +12,9 @@
   .Logo-Two{
     width: 80px;
   }
+  #myButton {
+    background-color: #ffc107;
+  }
   /* Navbar Styling */
   .bg-body-tertiary {
     background-color: rgba(255, 255, 255, 0) !important;
@@ -34,8 +37,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #000000d3; /* Dark background */
-    color: white !important;
+    background-color: #fafafaf6; /* Dark background */
+    color: rgb(8, 8, 8) !important;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699);
     transition: background-color 0.3s, color 0.3s;
@@ -43,7 +46,7 @@
   
   .sticky .nav-link,
   .sticky .navbar-brand {
-    color: white !important;
+    color: rgb(2, 2, 2) !important;
   }
   
   /* Underline effect for active link */
@@ -67,3 +70,26 @@
     }
   }
   
+  /* Active-Header-Css */
+  /* Underline effect for active link */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust this value if you need the line closer or further from the text */
+  width: 100%;
+  height: 2px;
+  background-color: #ffc107;
+  transition: width 0.3s ease;
+}
+
+/* Optional: Hover effect for navigation items */
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffc107;
+}

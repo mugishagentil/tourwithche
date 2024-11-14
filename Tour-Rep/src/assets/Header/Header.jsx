@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import MainImg from '../Image/Background.jpg';
-import Logo from '../Image/logo.png'
+import Logo from '../Image/logo.png';
 import './Header.css';
 import 'animate.css';
 
-
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
+
+  // Function to get the active link based on the current URL path
+  const getActiveLink = () => {
+    const path = window.location.pathname;
+    if (path === '/' || path === '/home') return 'Home';
+    if (path === '/about') return 'About';
+    if (path === '/destination') return 'Destination';
+    if (path === '/Contact') return 'Contact';
+    return ''; // No active link if path doesn't match any
+  };
+
+  const [activeLink, setActiveLink] = useState(getActiveLink);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,20 +56,41 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarText">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="https://www.instagram.com/buildcentre_kigali/?hl=en">Home</a>
+                  <a 
+                    className={`nav-link ${activeLink === 'Home' ? 'active' : ''}`} 
+                    aria-current="page" 
+                    href="http://localhost:5173/"
+                  >
+                    Home
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="http://localhost:5173/about">About</a>
+                  <a 
+                    className={`nav-link ${activeLink === 'About' ? 'active' : ''}`} 
+                    href="http://localhost:5173/about"
+                  >
+                    About
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="http://localhost:5173/destination">Destination</a>
+                  <a 
+                    className={`nav-link ${activeLink === 'Destination' ? 'active' : ''}`} 
+                    href="http://localhost:5173/destination"
+                  >
+                    Destination
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="http://localhost:5173/Contact">Contact</a>
+                  <a 
+                    className={`nav-link ${activeLink === 'Contact' ? 'active' : ''}`} 
+                    href="http://localhost:5173/Contact"
+                  >
+                    Contact
+                  </a>
                 </li>
               </ul>
               <span className="navbar-text">
-                <button className="btn btn-warning">ENQUIRY</button>
+                <button className="myBtn">ENQUIRY</button>
               </span>
             </div>
           </div>
@@ -68,17 +100,17 @@ function Header() {
         <div id="Content">
           {/* New-Content */}
           <section className="background-section">
-      <div className="overlay"></div>
-      <div className="content">
-        <h1 className='welcome animate__animated animate__backInDown'>WELCOME TO</h1>
-        <h1 className="title1 animate__animated animate__backInDown">TOURWITHCH</h1>
-        <hr />
-        <p className="subtitle">
-        Your gateway to unforgettable adventures in the heart of East Africa! We are your trusted guides to the breathtaking landscapes and vibrant cultures of Rwanda and Tanzania.
-        </p>
-        <p className="coordinates animate__animated animate__backInUp">Explore The World With Us</p>
-      </div>
-    </section>
+            <div className="overlay"></div>
+            <div className="content">
+              <h1 className='welcome animate__animated animate__backInDown'>WELCOME TO</h1>
+              <h1 className="title1 animate__animated animate__backInDown">TOURWITHCH</h1>
+              <hr />
+              <p className="subtitle">
+                Your gateway to unforgettable adventures in the heart of East Africa! We are your trusted guides to the breathtaking landscapes and vibrant cultures of Rwanda and Tanzania.
+              </p>
+              <p className="coordinates animate__animated animate__backInUp">Explore The World With Us</p>
+            </div>
+          </section>
         </div>
         </div>
       </div>

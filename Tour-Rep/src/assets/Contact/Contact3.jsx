@@ -1,36 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react'
 import Contact from '../Image/Contact.jpg';
-import './Contact.css'
 
-function Contact1() {
-  return ( 
-   <>
-      <div id="container" className='myContainer'>
-      <div id="text-section">
-        <p id="tagline" className='block'>WE ARE TOURWITHCH</p>
-        <h1 id="headline1" className='block'>Reach Out to Us Right Away</h1>
-        <p id="description" className='block'>
-        Connect now for swift assistance and discover the benefits of reaching out to us immediately for personalized solutions and support.
-        </p>
-        <div className="container3 block">
-            <div className="item3">
-                <div className="icon3">📧</div>
-                <div className="text3">
-                    <span className="title3">Headquarter Email</span>
-                    <span className="details3">info@tourwithche.com</span>
-                </div>
-            </div>
-            <div className="item3">
-                <div className="icon3">📞</div>
-                <div className="text3">
-                    <span className="title3">Office Contact</span>
-                    <span className="details3">+250 782 444 676</span>
-                </div>
-            </div>
-        </div>
-      </div>
-      {/* Contact-Forms */}
+function Contact3() {
+  return (
     <div className="main-container">
+    <div className="form-left">
+        <img src={Contact} alt="Car Reservation" className="form-image" />
+    </div>
     <div className="form-right">
         <h2>Sent Us A <span className="highlight">Message</span></h2>
         <form>
@@ -74,11 +50,7 @@ function Contact1() {
         </form>
     </div>
 </div>
-      
-    </div>
-    
-   </>
   )
 }
 
-export default Contact1
+export default Contact3

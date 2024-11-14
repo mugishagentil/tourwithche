@@ -20,26 +20,27 @@ const destinations = [
 
 function Destination() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animateOut, setAnimateOut] = useState(false);
+  const [animationClass, setAnimationClass] = useState('zoom-in');
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimateOut(true);
+      setAnimationClass('zoom-out'); // Start zoom-out animation
+
       setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % destinations.length);
-        setAnimateOut(false);
-      }, 500);
-    }, 5000);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % destinations.length); // Update to next slide
+        setAnimationClass('zoom-in'); // Apply zoom-in animation
+      }, 700); // Delay to allow zoom-out animation to complete
+    }, 5000); // Interval between slides
 
     return () => clearInterval(interval);
   }, []);
 
   const handleDestinationClick = (index) => {
-    setAnimateOut(true);
+    setAnimationClass('zoom-out');
     setTimeout(() => {
       setCurrentIndex(index);
-      setAnimateOut(false);
-    }, 500);
+      setAnimationClass('zoom-in');
+    }, 700);
   };
 
   return (
@@ -72,7 +73,7 @@ function Destination() {
             className="image"
           />
           <div className="image-overlay">
-            <h1 className={`image-title zoom-animation ${animateOut ? 'slide-out' : 'slide-in'}`}>
+            <h1 className={`image-title ${animationClass}`}>
               {destinations[currentIndex].name}
             </h1>
           </div>
