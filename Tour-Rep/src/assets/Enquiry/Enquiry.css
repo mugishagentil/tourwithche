@@ -8,21 +8,23 @@
     font-family: Arial, sans-serif;
     background: url('../Image/Elephant.jpg') center/cover no-repeat;
     position: relative;
-    z-index: 1; /* Ensure it's above the overlay */
     padding: 20px;
     overflow: hidden;
   }
+  
+  /* Overlay effect with opacity */
   .questionnaire-container::before {
     content: '';
-    /* position: absolute; */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity here (0.7 for semi-transparent) */
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity level here */
     z-index: 0;
-}
-  /* Step Container with centered content */
+  }
+  
+  /* Content container styling */
   .step-container {
     background: rgba(255, 255, 255, 0.315); /* Slightly opaque white background */
     padding: 30px 40px;
@@ -31,6 +33,7 @@
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
+    z-index: 1; /* Ensure content is above overlay */
   }
   
   h2 {
@@ -59,7 +62,7 @@
   }
   
   .option-button.selected {
-    border-color: #ff6600;
+    border-color: #ffc107;
     background-color: #ffe6cc;
     font-weight: bold;
   }
@@ -75,7 +78,7 @@
   .next-button,
   .submit-button {
     padding: 12px 25px;
-    background-color: #ff6600;
+    background-color: #ffc107;
     color: white;
     border: none;
     cursor: pointer;
@@ -87,7 +90,7 @@
   .back-button:hover,
   .next-button:hover,
   .submit-button:hover {
-    background-color: #ff8533;
+    background-color: #ffc107;
   }
   
   /* Date Picker Container */
@@ -135,7 +138,7 @@
   }
   .checkbox-container input{
     margin-right: 10px;
-    color: #e66b00;
+    color: #ffc107;
   }
   
   /* Heading styling */
@@ -163,12 +166,12 @@
   }
   
   .option-button.selected {
-    background: #ff8000;
+    background: #ffc107;
     color: #ffffff;
   }
   
   .option-button:hover {
-    background: #ff8000;
+    background: #ffc107;
     color: #ffffff;
   }
   
@@ -201,7 +204,7 @@
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    background-color: #ff8000;
+    background-color: #ffc107;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -210,7 +213,7 @@
   }
   
   .submit-button:hover {
-    background-color: #e66b00;
+    background-color: #ffc107;
   }
   
   /* Congratulations popup styling */
@@ -253,7 +256,7 @@
   }
   
   .close-button {
-    background-color: #ff8000;
+    background-color: #ffc107;
     color: white;
     padding: 8px 15px;
     margin-top: 15px;
@@ -264,7 +267,7 @@
   }
   
   .close-button:hover {
-    background-color: #e66b00;
+    background-color: #ffc107;
   }
   /* PickUp-Date */
   /* Styling for the date labels */
@@ -305,7 +308,7 @@
     right: 20px;
     width: 40px;
     height: 40px;
-    background-color: #ff6600;
+    background-color: #ffc107;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -320,7 +323,11 @@
   }
   
   .close-button:hover {
-    background-color: #ff8533;
+    background-color: #ffc107;
     transform: scale(1.1);
   }
-  
+  .error-message{
+    color: rgb(219, 30, 30);
+    font-size: 20px;
+    margin-top: 10px;
+  }

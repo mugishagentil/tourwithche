@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Enquiry.css';
-import { div } from 'framer-motion/client';
 
 const questions = [
   {
@@ -77,9 +76,11 @@ function Questionnaire() {
     phone: '',
     preferredContact: 'Email'
   });
+  const [error, setError] = useState(null);
 
   const handleOptionSelect = (step, option) => {
     setAnswers({ ...answers, [step]: option });
+    setError(null); // Clear any error messages
   };
 
   const handleCheckboxToggle = (checkboxLabel) => {
@@ -87,6 +88,7 @@ function Questionnaire() {
       ...prev,
       [checkboxLabel]: !prev[checkboxLabel]
     }));
+    setError(null); // Clear any error messages
   };
 
   const handleInputChange = (e) => {
@@ -95,9 +97,34 @@ function Questionnaire() {
       ...prev,
       [name]: value
     }));
+    setError(null); // Clear any error messages
   };
 
   const handleNext = () => {
+    const currentQuestion = questions.find(q => q.step === currentStep);
+
+    if (currentQuestion) {
+      if (currentQuestion.options && !answers[currentStep]) {
+        setError('*Please select an option before proceeding.');
+        return;
+      }
+
+      if (currentQuestion.datePicker) {
+        const startDate = document.querySelector('.date-picker[name="startDate"]');
+        const endDate = document.querySelector('.date-picker[name="endDate"]');
+        if (!startDate?.value || !endDate?.value) {
+          setError('Please select both start and end dates.');
+          return;
+        }
+      }
+
+      if (currentQuestion.checkboxes && !Object.values(checkboxes).some(val => val)) {
+        setError('Please select at least one checkbox option.');
+        return;
+      }
+    }
+
+    setError(null); // Clear errors if validation passes
     if (currentStep < questions.length + 1) {
       setCurrentStep(currentStep + 1);
     }
@@ -111,13 +138,18 @@ function Questionnaire() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const { email, firstName, surname, phone } = details;
+    if (!email || !firstName || !surname || !phone) {
+      setError('Please complete all fields in the details section.');
+      return;
+    }
+
     console.log("Questionnaire Responses:", { answers, checkboxes, details });
-    // alert("Congratulations! Your submission was successful.");
     window.location.href = "/"; // Redirect to home page
   };
 
   const handleClose = () => {
-    // Logic for closing, e.g., navigate to the homepage or hide the component
     window.location.href = "/";
   };
 
@@ -156,17 +188,17 @@ function Questionnaire() {
         return (
           <div className="date-picker-container">
             <label className="date-label">Start Date:</label>
-            <input type="date" className="date-picker" />
+            <input type="date" className="date-picker" name="startDate" />
 
             <label className="date-label">End Date:</label>
-            <input type="date" className="date-picker" />
+            <input type="date" className="date-picker" name="endDate" />
           </div>
         );
       }
 
       return (
         <>
-          <h2 style={{color: '#fff'}}>{currentQuestion.question}</h2>
+          <h2 style={{ color: '#fff' }}>{currentQuestion.question}</h2>
           <div className="options-container">
             {renderOptions(currentQuestion.options, currentStep)}
           </div>
@@ -178,11 +210,10 @@ function Questionnaire() {
         </>
       );
     } else {
-      // Render final details form
       return (
         <>
           <h2>Your Details</h2>
-          <p style={{color: '#fff'}}>Please tell us a little about yourself and your preferred method of contact.</p>
+          <p style={{ color: '#fff' }}>Please tell us a little about yourself and your preferred method of contact.</p>
           <div className="details-form">
             <input
               type="email"
@@ -220,13 +251,14 @@ function Questionnaire() {
 
   return (
     <div className="questionnaire-container">
-      {/* Close button */}
       <button className="close-button" onClick={handleClose}>
         ✕
       </button>
 
       <div className="step-container">
         {renderStepContent()}
+
+        {error && <p className="error-message">{error}</p>}
 
         <div className="navigation-buttons">
           {currentStep > 1 && (
