@@ -91,7 +91,7 @@ function Header() {
                 </li>
               </ul>
               <span className="navbar-text">
-                <button className="myBtn">ENQUIRY</button>
+              <Link href="#Enquiry" to='/enquiry'><button className="myBtn">ENQUIRY</button></Link>
               </span>
             </div>
           </div>

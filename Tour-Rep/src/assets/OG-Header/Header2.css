@@ -17,7 +17,7 @@
   }
   /* Navbar Styling */
   .bg-body-tertiary {
-    background-color: rgba(255, 255, 255, 0) !important;
+    background-color: rgb(255, 255, 255) !important;
     transition: background-color 0.3s, color 0.3s;
   }
   
@@ -37,7 +37,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fafafaf6; /* Dark background */
+    background-color: #fffffff6; /* Dark background */
     color: rgb(8, 8, 8) !important;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699);

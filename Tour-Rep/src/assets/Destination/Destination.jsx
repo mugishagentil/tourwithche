@@ -7,6 +7,7 @@ import namibia from '../Image/namibia.jpg';
 import zimbabwe from '../Image/zimbabwe.jpg';
 import kenya from '../Image/kenya.jpg';
 import southafrica from '../Image/southafrica.jpg';
+import { Link } from "react-router-dom"
 
 const destinations = [
   { name: 'Botswana', image: botswana, description: 'Explore the breathtaking wildlife of Botswana.' },
@@ -51,7 +52,7 @@ function Destination() {
           We operate in 8 African countries, with 60+ camps promising exclusive, private wild game
           viewing, unrivalled style, comfort, and a range of activities for a full immersion in nature and local culture.
         </p>
-        <a href="http://localhost:5173/destination"><button className="explore-button1 block">Explore Destinations Map</button></a>
+        <Link href="#Destination" to='/destination'>   <button className="explore-button1 block">Explore Destinations Map</button> </Link>
       </div>
       <div className="slideshow">
         <div className="nav-bar">

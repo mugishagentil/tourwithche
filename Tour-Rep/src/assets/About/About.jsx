@@ -4,6 +4,7 @@ import Gorilla from '../Image/Image4.jpg';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom"
 
 function About() {
   return (
@@ -21,7 +22,7 @@ function About() {
               Our destinations are unparalleled, embodying the true essence of unspoiled wilderness.
             </p>
             <a href="http://localhost:5173/about">
-              <button className="btn btn-warning animate__backInRight block ">Read More</button>
+            <Link href="#About" to='/about'>  <button className="btn btn-warning animate__backInRight block ">Read More</button> </Link>
             </a>
           </Col>
         </Row>

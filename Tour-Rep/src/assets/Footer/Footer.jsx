@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -24,17 +25,29 @@ const Footer = () => {
         {/* Links Section */}
         <div className="footer-section contact">
           <h3>Quick Links</h3>
+          <Link href="#Home" to='/'>
           <p><i className="fas fa-house-user"></i> <a href="/">Home</a></p>
+          </Link>
+          <Link href="#About" to='/about'>
           <p><i className="fas fa-info-circle"></i><a href="http://localhost:5173/about">About</a></p>
+          </Link>
+          <Link href="#Contact" to='/contact'>
           <p><i className="fas fa-phone"></i><a href="http://localhost:5173/Contact">Contact</a> </p>
+          </Link>
         </div>
 
         {/* Support Links Section */}
         <div className="footer-section contact">
           <h3>Help & Support</h3>
+          <Link href="#About" to='/about'>
           <p><i className="fas fa-question-circle"></i><a href="http://localhost:5173/about">FAQ</a></p>
+          </Link>
+          <Link href="#About" to='/about'>
           <p><i className="fas fa-life-ring"></i> <a href="http://localhost:5173/Contact">Support</a></p>
+          </Link>
+          <Link href="#Home" to='/'>
           <p><i className="fas fa-file-contract"></i> <a href="http://localhost:5173/about">Terms & Service</a></p>
+          </Link>
         </div>
 
         {/* Contact Section */}
@@ -49,11 +62,11 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>@2023 TourWithChe. All rights reserved. Designed by <a href="" style={{color: 'white', textDecoration: 'none'}}>Sanson Group</a></p>
-        <div className="footer-bottom-links">
+        {/* <div className="footer-bottom-links">
           <a href="#">Help</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
