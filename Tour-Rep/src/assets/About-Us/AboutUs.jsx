@@ -16,7 +16,7 @@ const AboutUs = () => {
     < Component0/>
     < Component1/>
     <Component5/>
-    < Component2/>
+    {/* < Component2/> */}
     <Component6/>
     < Component3/>
     < Component4/>

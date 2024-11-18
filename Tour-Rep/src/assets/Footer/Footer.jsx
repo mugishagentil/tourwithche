@@ -9,7 +9,7 @@ const Footer = () => {
         {/* About Section */}
         <div className="footer-section about">
           <h2>Adventor.</h2>
-          <p>
+          <p style={{fontSize: '16px'}}>
             Going on an adventure is not about just fun, it's all about yourself and entertaining yourself.
             Get the best out adventure activities in you and start living the moment.
           </p>

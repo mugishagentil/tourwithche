@@ -32,7 +32,7 @@ const Component4 = () => {
             <div id="section" key={index}>
               <div id="icon-container">{section.icon}</div>
               <h3 id="section-heading">{section.title}</h3>
-              <p id="section-description">{section.description}</p>
+              <p id="section-description" style={{fontSize: '16px'}}>{section.description}</p>
             </div>
           ))}
         </div>

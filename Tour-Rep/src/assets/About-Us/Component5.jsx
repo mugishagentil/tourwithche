@@ -3,7 +3,7 @@ import Image from '../Image/Culture.jpg'
 
 function Component5() {
   return (
-    <div id="container" className='container-div'>
+    <div id="container">
       <div id="text-section">
         <p id="tagline" className='block'>OUR DISTINCT APPROACH</p>
         <h1 id="headline" className='block'>We take pride in our distinct approach to travel</h1>

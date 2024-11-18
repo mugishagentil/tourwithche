@@ -3,6 +3,7 @@ import MainImg from '../Image/Background.jpg';
 import Logo from '../Image/logo.png';
 import './Header.css';
 import 'animate.css';
+import { Link } from "react-router-dom"
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -41,7 +42,7 @@ function Header() {
         <div className='background-overlay'>
         <nav className={`navbar navbar-expand-lg bg-bod ${isSticky ? 'sticky' : ''}`}>
           <div className="container-fluid">
-            <a className="navbar-brand me-auto" href="http://localhost:5173/"><img src={Logo} alt="" className='Logo'/></a>
+           <Link href="#Home" to='/'> <a className="navbar-brand me-auto" ><img src={Logo} alt="" className='Logo'/></a></Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -56,37 +57,37 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarText">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a 
+                <Link href="#Home" to='/'>  <a 
                     className={`nav-link ${activeLink === 'Home' ? 'active' : ''}`} 
                     aria-current="page" 
-                    href="http://localhost:5173/"
                   >
                     Home
                   </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a 
+                <Link href="#About" to='/about'>   <a 
                     className={`nav-link ${activeLink === 'About' ? 'active' : ''}`} 
-                    href="http://localhost:5173/about"
                   >
                     About
                   </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a 
+                <Link href="#Destination" to='/destination'>  <a 
                     className={`nav-link ${activeLink === 'Destination' ? 'active' : ''}`} 
-                    href="http://localhost:5173/destination"
                   >
                     Destination
                   </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a 
+                <Link href="#Contact" to='/contact'>  <a 
                     className={`nav-link ${activeLink === 'Contact' ? 'active' : ''}`} 
-                    href="http://localhost:5173/Contact"
                   >
                     Contact
                   </a>
+                  </Link>
                 </li>
               </ul>
               <span className="navbar-text">

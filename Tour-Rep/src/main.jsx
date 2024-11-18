@@ -7,6 +7,7 @@ import App from './App.jsx';
 import About from './assets/About-Us/AboutUs.jsx'  
 import Destin from './assets/Destins/Destin.jsx'
 import Contact from './assets/Contact/Contact.jsx'
+import Enquiry from './assets/Enquiry/Enquiry.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact />
+  },
+  {
+    path: '/enquiry',
+    element: <Enquiry  />
   },
 ]);
 

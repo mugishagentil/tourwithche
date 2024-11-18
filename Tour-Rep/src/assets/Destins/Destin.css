@@ -148,6 +148,7 @@
   /* Extra small screens (portrait mobile) */
   @media (max-width: 480px) {
     .wilderness-container {
+      height: 60vh;
       padding: 20px;
       text-align: left;
     }

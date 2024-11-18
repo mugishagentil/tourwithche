@@ -43,7 +43,7 @@
   /* Media-Query */
   @media (max-width: 480px){
     #container{
-        height: 130vh;
+        height: 150vh;
     }
   }
   @media (min-width: 768px) {

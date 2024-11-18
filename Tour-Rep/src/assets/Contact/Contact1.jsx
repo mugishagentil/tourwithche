@@ -5,11 +5,11 @@ import './Contact.css'
 function Contact1() {
   return ( 
    <>
-      <div id="container" className='myContainer'>
+      <div id="container1" >
       <div id="text-section">
         <p id="tagline" className='block'>WE ARE TOURWITHCH</p>
         <h1 id="headline1" className='block'>Reach Out to Us Right Away</h1>
-        <p id="description" className='block'>
+        <p id="description" className='block' >
         Connect now for swift assistance and discover the benefits of reaching out to us immediately for personalized solutions and support.
         </p>
         <div className="container3 block">
@@ -30,7 +30,7 @@ function Contact1() {
         </div>
       </div>
       {/* Contact-Forms */}
-    <div className="main-container">
+    <div className="main-container" >
     <div className="form-right">
         <h2>Sent Us A <span className="highlight">Message</span></h2>
         <form>

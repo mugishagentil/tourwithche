@@ -18,7 +18,7 @@ function Component1() {
       <div className="manifesto-text">
         <h3 className='animate__animated animate__backInDown block'>About Us</h3>
         <h2 className='animate__animated animate__backInDown block'>Make Your Dream Come True & Grow With Us</h2>
-        <p className='block'>
+        <p className='block' style={{fontSize: '16px'}}>
         At TourwithChe, we're your trusted companions in the heart of Africa, offering remarkable journeys through the stunning landscapes of Rwanda and Tanzania. We believe that travel is about creating unforgettable moments, and we're dedicated to unlocking the beauty, diversity, and cultural richness of East Africa for you.
         </p>
       </div>

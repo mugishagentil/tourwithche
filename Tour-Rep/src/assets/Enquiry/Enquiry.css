@@ -1,0 +1,326 @@
+
+  /* Main container with overlay styles */
+  .questionnaire-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url('../Image/Elephant.jpg') center/cover no-repeat;
+    position: relative;
+    z-index: 1; /* Ensure it's above the overlay */
+    padding: 20px;
+    overflow: hidden;
+  }
+  .questionnaire-container::before {
+    content: '';
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity here (0.7 for semi-transparent) */
+    z-index: 0;
+}
+  /* Step Container with centered content */
+  .step-container {
+    background: rgba(255, 255, 255, 0.315); /* Slightly opaque white background */
+    padding: 30px 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling the options container */
+  .options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Options button styling */
+  .option-button {
+    padding: 12px 25px 12px 25px;
+    border: 2px solid #ffffffc4;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-size: 1rem;
+  }
+  
+  .option-button.selected {
+    border-color: #ff6600;
+    background-color: #ffe6cc;
+    font-weight: bold;
+  }
+  
+  /* Navigation buttons styling */
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .back-button,
+  .next-button,
+  .submit-button {
+    padding: 12px 25px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+  }
+  
+  .back-button:hover,
+  .next-button:hover,
+  .submit-button:hover {
+    background-color: #ff8533;
+  }
+  
+  /* Date Picker Container */
+  .date-picker-container {
+    margin-top: 15px;
+  }
+  
+  .date-picker {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    background-color: #ffffffc4;
+    border-radius: 5px;
+  }
+
+  /* Submittion */
+  /* General container styling */
+.questionnaire-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .step-container {
+    background: #ffffff00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .checkbox-container{
+    color: rgb(238, 238, 238);
+    padding: 5px;
+  }
+  .checkbox-container input{
+    margin-right: 10px;
+    color: #e66b00;
+  }
+  
+  /* Heading styling */
+  h2 {
+    color: #fcfcfc;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Options styling */
+  .options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .option-button {
+    background: #ffffffc4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .option-button.selected {
+    background: #ff8000;
+    color: #ffffff;
+  }
+  
+  .option-button:hover {
+    background: #ff8000;
+    color: #ffffff;
+  }
+  
+  /* Checkbox container */
+  .checkbox-container {
+    margin: 5px 0;
+  }
+  
+  /* Final form styling */
+  .details-form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffffc4;
+    outline: none;
+  }
+  
+  .contact-method label {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .contact-method input {
+    margin-right: 5px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ff8000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #e66b00;
+  }
+  
+  /* Congratulations popup styling */
+  .congratulations-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .congratulations-message {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .congratulations-message h3 {
+    color: #28a745;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .congratulations-message p {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .close-button {
+    background-color: #ff8000;
+    color: white;
+    padding: 8px 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background-color: #e66b00;
+  }
+  /* PickUp-Date */
+  /* Styling for the date labels */
+.date-label {
+  display: flex;
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Advanced styling for the date input fields */
+.date-picker {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.date-picker:hover,
+.date-picker:focus {
+  border-color: #dfdfdf00;
+  outline: none;
+}
+
+.date-picker-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Close Button Styling */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10;
+  }
+  
+  .close-button:hover {
+    background-color: #ff8533;
+    transform: scale(1.1);
+  }
+  

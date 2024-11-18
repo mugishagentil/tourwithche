@@ -30,6 +30,7 @@
 
 .adventure-item {
   flex: 1;
+  height: auto;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -118,12 +119,12 @@
 @media (max-width: 768px) {
   .adventure-grid {
       flex-direction: column;
-      height: auto;
+      height: 160vh;
   }
 
   .adventure-item {
-      height: 70vh;
-      margin-bottom: 10px;
+      height: 100vh;
+      margin-bottom: 20px;
   }
 }
 
@@ -139,6 +140,7 @@
   .hover-paragraph {
       font-size: 0.8em;
       width: 90%;
+      margin-right: 20px;
   }
 
   .adventure-title {
@@ -147,6 +149,13 @@
   .Adventure-Paragraph{
     width: 100%;
     margin: 0 0 50px 0%;
+  }
+  .hover-paragraph {
+    position: absolute;
+    bottom: 2%;
+    left: 11%;
+    width: 80%;
+    font-size: 0.2em;
   }
 }
 

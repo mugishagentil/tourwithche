@@ -80,7 +80,7 @@ const AdventureGrid = () => {
             </div>
             {hoveredIndex === index && (
               <div className="hover-paragraph backInUp">
-                <p>
+                <p style={{fontSize: '16px'}}>
                   To create a responsive component similar to the image you've provided, 
                   we’ll use flexbox or CSS grid to align the images in a row and apply media 
                   queries for responsiveness. Each item will have a background image with 
