@@ -9,6 +9,7 @@ import Component3 from './component3.jsx';
 import Component4 from './Component4.jsx';
 import Component5 from './Component5.jsx';
 import Component6 from './Component6.jsx';
+import WhatsAppWidget from "../WhatsAppWidget/WhatsAppWidget.jsx"
 const AboutUs = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const AboutUs = () => {
     <Component6/>
     < Component3/>
     < Component4/>
+    <WhatsAppWidget/>
     <Footer/>
     </>
   );

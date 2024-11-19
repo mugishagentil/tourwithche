@@ -62,7 +62,7 @@
   }
   
   .option-button.selected {
-    border-color: #ffc107;
+    border-color: rgb(34, 21, 3);
     background-color: #ffe6cc;
     font-weight: bold;
   }
@@ -78,7 +78,7 @@
   .next-button,
   .submit-button {
     padding: 12px 25px;
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
     color: white;
     border: none;
     cursor: pointer;
@@ -90,7 +90,7 @@
   .back-button:hover,
   .next-button:hover,
   .submit-button:hover {
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
   }
   
   /* Date Picker Container */
@@ -138,7 +138,7 @@
   }
   .checkbox-container input{
     margin-right: 10px;
-    color: #ffc107;
+    color: rgb(34, 21, 3);
   }
   
   /* Heading styling */
@@ -166,12 +166,12 @@
   }
   
   .option-button.selected {
-    background: #ffc107;
+    background: rgb(34, 21, 3);
     color: #ffffff;
   }
   
   .option-button:hover {
-    background: #ffc107;
+    background: rgb(34, 21, 3);
     color: #ffffff;
   }
   
@@ -204,7 +204,7 @@
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -213,7 +213,7 @@
   }
   
   .submit-button:hover {
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
   }
   
   /* Congratulations popup styling */
@@ -256,7 +256,7 @@
   }
   
   .close-button {
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
     color: white;
     padding: 8px 15px;
     margin-top: 15px;
@@ -267,7 +267,7 @@
   }
   
   .close-button:hover {
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
   }
   /* PickUp-Date */
   /* Styling for the date labels */
@@ -308,7 +308,7 @@
     right: 20px;
     width: 40px;
     height: 40px;
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -323,7 +323,7 @@
   }
   
   .close-button:hover {
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
     transform: scale(1.1);
   }
   .error-message{

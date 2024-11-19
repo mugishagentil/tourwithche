@@ -52,14 +52,14 @@
 .icon3 {
   width: 40px;
   height: 40px;
-  background-color: #ffc107;
+  background-color: rgb(34, 21, 3);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 15px;
   font-size: 1.2rem;
-  color: #1b2243;
+  color: #ffffff;
 }
 
 .text3 {
@@ -106,7 +106,7 @@
 }
 
 .highlight {
-  color: #ffc107;
+  color: rgb(34, 21, 3)
 }
 
 form {
@@ -134,7 +134,7 @@ form {
 }
 
 .form-group label span {
-  color: #ffc107;
+  color: rgb(34, 21, 3);
 }
 
 .form-group input {
@@ -151,7 +151,7 @@ form {
 }
 
 .rent-button {
-  background-color: #ffc107;
+  background-color: rgb(34, 21, 3);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -165,7 +165,7 @@ form {
 }
 
 .rent-button:hover {
-  background-color: #ffc107;
+  background-color: rgb(34, 21, 3);
 }
 
 /* Responsive styles */

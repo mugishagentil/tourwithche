@@ -46,7 +46,7 @@ const Footer = () => {
           <p><i className="fas fa-life-ring"></i> <a href="http://localhost:5173/Contact">Support</a></p>
           </Link>
           <Link href="#Home" to='/'>
-          <p><i className="fas fa-file-contract"></i> <a href="http://localhost:5173/about">Terms & Service</a></p>
+          <p><i className="fas fa-file-contract"></i> <a href="/privacypolicy">Privacy Policy</a></p>
           </Link>
         </div>
 

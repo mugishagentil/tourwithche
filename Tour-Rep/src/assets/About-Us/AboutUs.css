@@ -54,8 +54,8 @@
     }
   }
   @media (max-width: 480px) {
-    .myHashtag{
-      display: none;
+    .Hashtag{
+      width: 100px;
     }
     .about-us{
       height: 200vh;

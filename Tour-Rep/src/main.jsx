@@ -8,6 +8,7 @@ import About from './assets/About-Us/AboutUs.jsx'
 import Destin from './assets/Destins/Destin.jsx'
 import Contact from './assets/Contact/Contact.jsx'
 import Enquiry from './assets/Enquiry/Enquiry.jsx';
+import PrivacyPolicy from './assets/PrivacyPolicy/PrivacyPolicy.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: '/enquiry',
     element: <Enquiry  />
+  },
+  {
+    path: '/privacypolicy',
+    element: <PrivacyPolicy  />
   },
 ]);
 

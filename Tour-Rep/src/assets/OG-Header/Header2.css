@@ -13,7 +13,7 @@
     width: 80px;
   }
   #myButton {
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
   }
   /* Navbar Styling */
   .bg-body-tertiary {
@@ -57,7 +57,7 @@
     bottom: -3px;
     width: 100%;
     height: 2px;
-    background-color: #ffc107;
+    background-color: rgb(34, 21, 3);
   }
   
   /* Responsive Adjustments */
@@ -79,7 +79,7 @@
   bottom: -3px; /* Adjust this value if you need the line closer or further from the text */
   width: 100%;
   height: 2px;
-  background-color: #ffc107;
+  background-color: rgb(34, 21, 3);
   transition: width 0.3s ease;
 }
 
@@ -91,5 +91,5 @@
   bottom: -3px;
   width: 100%;
   height: 2px;
-  background-color: #ffc107;
+  background-color: rgb(34, 21, 3);
 }

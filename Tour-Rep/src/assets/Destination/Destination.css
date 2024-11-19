@@ -24,25 +24,7 @@ body {
 .header-section p {
   font-size: 16px;
   color: #5b4a39;
-  margin: 10px 0;
-}
-
-.explore-button1 {
-  background-color: transparent;
-  border: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  margin: 15px 0 40px 0;
-  cursor: pointer;
-  font-size: 14px;
-  text-transform: uppercase;
-  display: inline-block;
-}
-
-.explore-button1:hover {
-  background-color: #ffc107;
-  color: #fff;
-  border: 1px solid #ffc107;
+  margin: 10px 0 70px 0;
 }
 
 /* Slideshow styling */
@@ -150,8 +132,6 @@ body {
     opacity: 0;
   }
 }
-
-
 /* Media queries */
 @media (max-width: 768px) {
   .header-section {

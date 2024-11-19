@@ -35,10 +35,10 @@
     color: white !important;
 }
 .myBtn{
-  background-color: #ffc107;
+  background-color: #ffc10700;
   color: black;
   padding: 10px 20px 10px 20px;
-  border: none; 
+  border: 2px solid black; 
   margin-left: 5px;
 }
 .myBtn:hover{
@@ -51,7 +51,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: black; /* Black background on scroll */
+    background-color: rgb(34, 21, 3); /* Black background on scroll */
     color: white;
     z-index: 1000;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -74,7 +74,7 @@ span.navbar-toggler-icon{
   color: white;
 }
 .sticky .myBtn :hover{
-  background-color: #ffc107;
+  background-color: rgb(34, 21, 3);
   color: rgb(0, 0, 0);
 }
 

@@ -8,6 +8,8 @@ import FullScreenSection from "./assets/Under-Ex/Component.jsx"
 import Slider from "./assets/Slider/Slider.jsx"
 import ZoomForm from "./assets/ZoomForm/ZoomForm.jsx"
 import Footer from "./assets/Footer/Footer.jsx"
+import WhatsAppWidget from "./assets/WhatsAppWidget/WhatsAppWidget.jsx"
+import CookieConsent from "react-cookie-consent";
 function App() {
   return (
     <>
@@ -20,6 +22,14 @@ function App() {
       <FullScreenSection/>
       {/* <NewsletterForm/> */}
       <ZoomForm/>
+     <WhatsAppWidget/>
+     <CookieConsent 
+     debug={true}
+     location="bottom"
+     style={{backgroundColor: '#fff',color: '#000', textAlign: 'center'}}
+     buttonStyle={{backgroundColor: 'rgb(34, 21, 3)', color: '#fff'}}
+     >This site uses cookies. See our <a href="/privacypolicy" style={{textDecoration: 'none', color: 'rgb(34, 21, 3)'}}>privecy Policy</a> for more.
+     </CookieConsent>
       <Footer/> 
     </>
   )

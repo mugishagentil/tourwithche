@@ -7,6 +7,7 @@ import Destin2 from '../Destins/Destin2.jsx';
 import Destin3 from './Destin3.jsx';
 import Destin4 from './Destin4.jsx';
 import Destin5 from './Destin5.jsx';
+import WhatsAppWidget from "../WhatsAppWidget/WhatsAppWidget.jsx"
 function Destin() {
   return (
     <div>
@@ -16,6 +17,7 @@ function Destin() {
       <Destin4/>
       <Destin3/>
       <Destin5/>
+      <WhatsAppWidget />
       <Footer/>
     </div>
   )

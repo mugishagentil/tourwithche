@@ -211,8 +211,8 @@
 
 .submit-button2 {
   padding: 10px;
-  background-color: #ffc107;
-  color: white;
+  background-color: rgb(104, 104, 104);
+  color: rgb(15, 15, 15);
   border: none;
   border-radius: 5px;
   cursor: pointer;

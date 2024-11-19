@@ -22,7 +22,7 @@ function About() {
               Our destinations are unparalleled, embodying the true essence of unspoiled wilderness.
             </p>
             <a href="http://localhost:5173/about">
-            <Link href="#About" to='/about'>  <button className="btn btn-warning animate__backInRight block ">Read More</button> </Link>
+            <Link href="#About" to='/about'>  <button className="btn btn-warning animate__backInRight block " style={{backgroundColor: '#fff', border: 'none'}}>Read More</button> </Link>
             </a>
           </Col>
         </Row>

@@ -43,7 +43,7 @@ function Contact3() {
             <div className="form-row">
                 <div className="form-group">
                     <label>Message <span>*</span></label>
-                    <input type="text" required />
+                    <input type="textarea" required />
                 </div>
             </div>
             <button type="submit" className="rent-button">Submit</button>
